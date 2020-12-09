@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="header">
+    <h1 id="cinema">CINEMA</h1>
+  </div>
+  <div class="body">
+    <div class="body_header">
+      <h3 id="room">Room {{currentMovie.room}}</h3>
+      <h2 id="Title">{{currentMovie.title}}</h2>
+    </div>
+    <div class="body_content">
+      <img src="{{currentMovie.poster}}" alt="">
+      <div class="info">
+        <div id="genre">
+          <div>Genres</div>
+          <div>
+            <ul>
+              <li *ngFor='let g of currentMovie.genres'>{{g}}</li>
+            </ul>
+          </div>
+        </div>
+        <div id="year">
+          <div>Year</div>
+          <div>{{currentMovie.year}}</div>
+        </div>
+        <div id="director">
+          <div>Director</div>
+          <div>{{currentMovie.director}}</div>
+        </div>
+        <div id="actors">
+          <div>Actors</div>
+          <div>
+            <ul>
+              <li *ngFor='let a of currentMovie.actors'>{{a}}</li>
+            </ul>
+          </div>
+        </div>
+        <div id="schedule">
+          <div>Schedule</div>
+          <div>
+            <ul>
+              <li *ngFor='let a of currentMovie.hours'>{{a}}</li>
+            </ul>
+          </div>
+        </div>
+        <div id="synopsis">
+          <div>Synopsis</div>
+          <div>{{currentMovie.synopsis}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <button mat-raised-button color="primary" routerLink='../home'>HOME</button>
+  </div>
+</div>
+

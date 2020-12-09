@@ -1,0 +1,14 @@
+<mat-toolbar color='primary'>
+  <span>CARTELERA DE PELÍCULAS</span>
+  </mat-toolbar>
+
+<div class="container">
+  <div class="movie" *ngFor="let m of movies">
+    <h2>ROOM {{m.room}}</h2>
+    <a routerLink='/movie' queryParams="{{m.id}}">
+      <img src="{{m.poster}}" alt="{{m.title}}">
+    </a>
+    <h3><a routerLink='/movie' queryParams="{{m.id}}">
+      {{m.title}}</a></h3>
+  </div>
+</div>
